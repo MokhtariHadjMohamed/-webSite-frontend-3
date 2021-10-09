@@ -1,0 +1,90 @@
+/* Start Var */
+:root{
+    --main-color: #23464d;
+    --sec-color: #15a79b;
+}
+/* End Var */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global Rules */
+/* Start Header */
+.header{
+  padding: 100px 150px;
+  background-image: url(../Image/penguin-2203693_1920.jpg);
+  background-size: cover;
+  color: white;
+}
+.header .container .menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.header .container .menu img{
+  width: 100px;
+}
+
+.header .container .menu .menu_val{
+  display: flex;
+  font-weight: 400;
+}
+
+.header .container .menu a{
+  padding: 10px 40px;
+  background: #15a79b;
+  text-decoration: none;
+  color: white;
+}
+
+.header .container .menu a:hover{
+  font-weight: 700;
+  background-color: #23464d;
+}
+
+.header .container h1{
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0;
+}
+
+.header .container p{
+  font-weight: lighter;
+  font-size: x-large;
+  margin: 10px 0;
+}
+/* End Header */
