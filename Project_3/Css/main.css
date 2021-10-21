@@ -3,6 +3,7 @@
     --main-color: #23464d;
     --sec-color: #15a79b;
     --background-end: #001513;
+    --text-color: rgb(190, 183, 255);
 }
 /* End Var */
 /* Start Global Rules */
@@ -50,9 +51,20 @@
 }
 
 .title .sub{
-  font-weight: lighter;
   margin: 10px;
-  font-size: 20px;
+  font-weight: lighter;
+  font-size: x-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 700px){
+  .title h1{
+    font-size: x-large;
+  }
+
+  .title .sub{
+    font-size: small;
+  }
 }
 /* End Titel */
 /* Start Header */
@@ -62,6 +74,7 @@
   background-size: cover;
   color: white;
 }
+
 .header .container .menu{
   display: flex;
   align-items: center;
@@ -78,14 +91,14 @@
   font-weight: 400;
 }
 
-.header .container .menu a{
+.header .container .menu .menu_val a{
   padding: 10px 40px;
   background: #15a79b;
   text-decoration: none;
   color: white;
 }
 
-.header .container .menu a:hover{
+.header .container .menu .menu_val a:hover{
   font-weight: 700;
   background-color: #23464d;
 }
@@ -102,6 +115,86 @@
   margin: 10px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.lines{
+  display: none;
+}
+
+.menu_phone .menu_val_line{
+  display: none;
+}
+
+/* Start Phone Style */
+
+@media (max-width: 700px){
+  .header{
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .header .container .menu{
+    display: block;
+    margin: auto;
+  }
+
+  .header .container .menu img{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .header .container .menu .menu_val{
+    display: none;
+  }
+
+  .menu_phone{
+    position: relative;
+  }
+
+  .lines{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -30px;
+  }
+
+  .lines .line{
+    width: 50px;
+    height: 7px;
+    background-color: var(--sec-color);
+    margin-bottom: 5px;
+  }
+
+  .menu_phone:hover .menu_val_line{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin: 15px 0 ;
+    background-color: var(--sec-color);
+  }
+
+  .menu_phone:hover .menu_val_line .tring{
+    width: 10px;
+    border: 10px solid;
+    border-color: transparent transparent var(--sec-color) transparent;
+    position: absolute;
+    top: -20px;
+    right: 15px;
+  }
+
+  .menu_phone .menu_val_line a{
+    padding: 10px 40px;
+    background: #15a79b;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+
+  .menu_phone .menu_val_line a:hover{
+    font-weight: 700;
+    background-color: #23464d;
+  }
+} 
+/* End  Phone Style */
 /* End Header */
 /* Start AboutUs */
 .aboutUs {
@@ -148,11 +241,27 @@
 .aboutUs .container button:hover{
   background-color: var(--main-color);
 }
+
+@media (max-width: 700px){
+  .aboutUs .container{
+    display: block;
+    text-align: center;
+  }
+
+  .aboutUs .container img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .aboutUs .container button{
+    width: 50%;
+    height: 30px;
+  }
+}
 /* End AboutUs */
 /* Start Sponsoer */
 .sponsoer{
-  margin: 50px 0;
-  padding: 30px 0;
+  padding: 50px 0;
   text-align: center;
   background-color: var(--main-color);
   color: white;
@@ -178,8 +287,7 @@
 .contact{
   color: white;
   background-color: var(--background-end);
-  margin: 50px 0 0 0;
-  padding: 20px;
+  padding: 50px 0;
 }
 
 .contact .container{
@@ -209,7 +317,7 @@
   margin-top: 15px;
   outline: none;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--sec-color);
   color: white;
   font-size: 20px;
@@ -228,4 +336,42 @@
   width: 100px;
 }
 
+.contact .container .phone{
+  margin: 50px 0;
+}
+
+.contact .container .mail,.phone{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.contact .container .mail p,.phone p{
+  display: inline;
+  font-weight: lighter;
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 10px;
+}
 /* End Contact */
+/* Start Foter */
+.footer{ 
+  text-align: center;
+  background-color: black;
+  color: var(--text-color);
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer h5{
+  color: var(--sec-color);
+  font-weight: 900;
+  display: inline;
+}
+
+.footer p{
+  display: inline;
+  font-weight: 100px;
+}
+/* End Foter */
