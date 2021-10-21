@@ -125,7 +125,6 @@
 }
 
 /* Start Phone Style */
-
 @media (max-width: 700px){
   .header{
     padding: 50px 0;
@@ -282,6 +281,17 @@
   font-weight: 100;
   padding: 10px;
 }
+
+@media (max-width: 700px){
+  .sponsoer .container .boxes{
+    display: block;
+    padding: 30px;
+  }
+
+  .sponsoer .container .boxes .box{
+    margin: 0 0 30px 0;
+  }
+}
 /* End Sponsoer */
 /* Satrt Contact */
 .contact{
@@ -353,6 +363,29 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin: 10px;
+}
+
+@media (max-width: 700px){
+  .contact .container{
+    display: block;
+    text-align: center;
+  }
+
+  .contact .container .contactUs textarea{
+    margin: auto;
+  }
+
+  .contact .container .contactUs,.sitemap{
+    margin-bottom: 100px;
+  }
+
+  .contact .container .np .phone, .mail{
+    justify-content: center;
+  }
+
+  .contact .container .mail p, .phone p{
+    font-size: 15px;
+  }
 }
 /* End Contact */
 /* Start Foter */
